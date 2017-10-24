@@ -13,7 +13,7 @@ void* faktorial(void* arg)
         int sum=1;
         pthread_t id=pthread_self();
 
-        if (pthread_equal(id,tid[i])
+        if (pthread_equal(id,tid[i]))
           { 
                 for(i=0; i<n; i++)
                 {
