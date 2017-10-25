@@ -39,3 +39,18 @@ void* cariwaifu(void *arg)
         return NULL;
 }
 
+int main(void)
+{
+        int i=0;
+        int err;
+        while (i<2)
+        {
+                pthread_create(&(tid[i]),NULL,&cariwaifu,NULL);
+                i++;
+        }
+        pthread_join(tid[0],NULL);
+        pthread_join(tid[1],NULL);
+        printf("%d %d", waifu1, waifu2);
+        return 0;
+}
+
